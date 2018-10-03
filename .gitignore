@@ -7,6 +7,12 @@
 
 # dependencies
 /node_modules
+/animations-angular-cv64/node_modules
+/bootstrap-angular-cv64/node_modules
+/database/node_modules
+/firebase-angular-cv64/node_modules
+/material-angular-io-cv64/node_modules
+/resolver-angular-cv64/node_modules
 
 # IDEs and editors
 /.idea
