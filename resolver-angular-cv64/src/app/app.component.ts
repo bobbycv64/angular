@@ -1,5 +1,6 @@
 // https://www.youtube.com/watch?v=6xmCNfPP90E
-// https://www.youtube.com/watch?v=KefdTtsoKjY&t=104s
+// https://www.youtube.com/watch?v=KefdTtsoKjY
+// https://www.youtube.com/watch?v=Sm353aYNZxU
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Item } from './models/item.models';
