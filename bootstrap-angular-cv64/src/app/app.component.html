@@ -1,153 +1,65 @@
-<div class="container">
 <div class="jumbotron text-center">
-  <h1>Joyce's Page</h1>
-  <!-- <p class="my-format">Resize this responsive page to see the effect!</p> -->
+  <h1>{{title}}</h1>
+  <p class="my-format">Resize this responsive page to see the effect!</p>
 </div>
-</div>
+
+<nav class="navbar navbar-expand-lg my-app">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">One</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Two</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Yet Another Action</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<br>
 <div class="container">
-  <nav class="navbar navbar-expand-lg my-app">
-    <a class="navbar-brand" href="#">CompanyName</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home
-            <!-- <span class="sr-only">(current)</span> -->
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown link
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <br>
-  <!-- <div class="container"> -->
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-3">
-        <div class="input-group font-weight-bold">
-          <label for="my-format">
-            Order number: </label>
-          <input type="text" class="form-control col-sm-4 ml-2" id="my-format" placeholder="XXXXX">
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-3">
-        <!-- <div class="form-group">
-        <label for="my-format">Order number:</label>
-        <input type="text" class="form-control col-sm-4" id="my-format">
-      </div> -->
-      </div>
-      <div class="col-sm-6 font-weight-bold">
-       00 Candidates match your search
-      </div>
-      <div class="col-sm-3">
-        <h6></h6>
+  <div class="row">
+    <div class="col-sm-3">
+      <h6>Column 1</h6>
+      <p class="my-format">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p class="my-format">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <div class="alert alert-primary" role="alert">
+        This is a primary alert<br><br>
+        <button (click)="increment()">Increment</button>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-3">
-        <div id="accordion">
-          <div class="card">
-            <div class="card-header">
-
-                <!-- <p class="font-weight-bold">Bold text.</p> -->
-
-              <div class="card-link font-weight-bold" data-toggle="collapse" href="#collapseOne">
-                profession
-              </div>
-            </div>
-            <div id="collapseOne" class="collapse show" data-parent="#accordion">
-              <div class="card-body">
-                <p class="my-format">Selected profession</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <div class="collapsed card-link font-weight-bold" data-toggle="collapse" href="#collapseTwo">
-                Area
-              </div>
-            </div>
-            <div id="collapseTwo" class="collapse" data-parent="#accordion">
-              <div class="card-body">
-                <p class="my-format">Workplace address</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <div class="collapsed card-link font-weight-bold" data-toggle="collapse" href="#collapseThree">
-                Education
-              </div>
-            </div>
-            <div id="collapseThree" class="collapse" data-parent="#accordion">
-              <div class="card-body">
-                <p class="my-format">Educational background</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
-              <div class="collapsed card-link font-weight-bold" data-toggle="collapse" href="#collapseFour">
-                Experience
-              </div>
-            </div>
-            <div id="collapseFour" class="collapse" data-parent="#accordion">
-              <div class="card-body">
-                <p class="my-format">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
+    <div class="col-sm-6">
+      <h6>Column 2</h6>
+      <p class="my-format">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p class="my-format">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <div class="alert alert-success" role="alert">
+        This is a success alert<br><br> Count Value: {{count}}
       </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            Name of Student
-            <br> Address:
-            <br> Phone:
-            <i class="fa fa-times"></i>
-            <button type="button" class="btn btn-primary float-right fa fa-times">
-              <span aria-hidden="true">&times;</span>
-              Delete
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <h5 class="card-header font-weight-bold">Selected students</h5>
-          <div class="card-body">
-            <!-- <button type="button" class="btn btn-primary">Delete</button> -->
-          </div>
-          <div class="card-footer font-weight-bold text-muted">
-            Preview
-          </div>
-
-        </div>
+    </div>
+    <div class="col-sm-3">
+      <h6>Column 3</h6>
+      <p class="my-format">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p class="my-format">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <div class="alert alert-warning" role="alert">
+        This is a warning alert<br><br>
+        <button (click)="decrement()">Decrement</button>
       </div>
     </div>
   </div>
