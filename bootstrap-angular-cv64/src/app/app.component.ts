@@ -15,8 +15,6 @@ export class AppComponent implements OnInit {
   @Input() count: number = 3;
   @Output() countChange = new EventEmitter<number>();
 
-
-
   constructor() {
     console.log('AppComponent.constructor');
   }

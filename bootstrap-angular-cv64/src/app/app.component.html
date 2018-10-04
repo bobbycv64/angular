@@ -62,11 +62,11 @@
       <form (submit)="addItem(item.value)">
         <div>
           <label for="item">Item:&nbsp;&nbsp;</label>
-          <input type="text" #item>
+          <input type="text" #item/>
         </div>
         <div>
           <label for="name">Two Way:&nbsp;&nbsp;</label>
-      <!--  <input type="text" [(ngModel)]="twoWay" name="twoWay"> -->
+          <!--<input type="text" [(ngModel)]="twoWay" name="twoWay" /> &nbsp;&nbsp;TwoWay Output: {{twoWay}}-->
         </div>
       </form>
 
