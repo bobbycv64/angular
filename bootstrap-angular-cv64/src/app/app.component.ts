@@ -8,8 +8,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 export class AppComponent implements OnInit {
 
-  title = 'bootstrap-angular-cv64';
-  twoWay = '';
+  title = 'Bobby Estey Demo';
+  twoWayBinding = 'twoBinding';
   items:string[] = null;
 
   @Input() count: number = 3;
