@@ -27,8 +27,8 @@ export class DatabaseService {
     localStorage.setItem('records', JSON.stringify(records));
   }
 
-  removeMarker(record) {
-    console.log('DatabaseService.removeMarker');
+  removeRecord(record) {
+    console.log('DatabaseService.removeRecord');
     var records = JSON.parse(localStorage.getItem('records'));
     for (var i = 0; i < records.length; i++) {
       if (records.index == records[i].index) {
