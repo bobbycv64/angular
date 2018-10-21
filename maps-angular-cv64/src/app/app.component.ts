@@ -1,3 +1,4 @@
+//https://medium.com/@balramchavan/integrating-google-maps-in-angular-5-ca5f68009f29
 /// <reference types="@types/googlemaps" />
 import { Component } from '@angular/core';
 import { ViewChild } from '@angular/core';
@@ -7,14 +8,14 @@ import { ViewChild } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'maps-angular-cv64';
+  latitude: number;
+  longitude: number;
 
   @ViewChild('gmap') gmapElement: any;
   map: google.maps.Map;
-
-  latitude: number;
-  longitude: number;
 
   ngOnInit() {
     var mapProp = {
