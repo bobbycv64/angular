@@ -1,0 +1,13 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<div #gmap style="width:640px;height:400px"></div>
+
+<div class="col-md-3 col-sm-12 col-xs-12">
+  <button (click)="setMapType('terrain')" class="btn btn-primary">Terrain</button>
+  <button (click)="setMapType('satellite')" class="btn btn-danger">Satellite</button>
+  <button (click)="setMapType('roadmap')" class="btn btn-warning">Road Map</button>
+</div>
