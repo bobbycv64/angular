@@ -13,10 +13,13 @@ export class AppComponent {
   @ViewChild('gmap') gmapElement: any;
   map: google.maps.Map;
 
+  latitude: number;
+  longitude: number;
+
   ngOnInit() {
     var mapProp = {
-      center: new google.maps.LatLng(17.5793, 73.8143),
-      zoom: 5,
+      center: new google.maps.LatLng(37.2776, -76.5039),
+      zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
@@ -24,5 +27,10 @@ export class AppComponent {
 
   setMapType(mapTypeId: string) {
     this.map.setMapTypeId(mapTypeId)
+  }
+
+  setCenter(e: any) {
+    e.preventDefault();
+    this.map.setCenter(new google.maps.LatLng(this.latitude, this.longitude));
   }
 }
