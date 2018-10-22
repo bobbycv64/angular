@@ -18,6 +18,7 @@ export class AppComponent {
   map: google.maps.Map;
 
   ngOnInit() {
+    console.log("maps-angular-cv64.ngOnInit");
     var mapProp = {
       center: new google.maps.LatLng(37.2776, -76.5039),
       zoom: 15,
@@ -27,10 +28,12 @@ export class AppComponent {
   }
 
   setMapType(mapTypeId: string) {
+    console.log("maps-angular-cv64.setMapType:" + mapTypeId);
     this.map.setMapTypeId(mapTypeId)
   }
 
   setCenter(e: any) {
+    console.log("maps-angular-cv64.setCenter");
     e.preventDefault();
     this.map.setCenter(new google.maps.LatLng(this.latitude, this.longitude));
   }
