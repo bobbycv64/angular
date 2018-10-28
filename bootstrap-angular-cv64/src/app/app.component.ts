@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 export class AppComponent implements OnInit {
 
-  title = 'Bobby Estey Demo';
+  title = 'Bobby Estey Demo23';
   twoWayBinding = 'twoBinding';
   items:string[] = null;
 

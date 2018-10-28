@@ -11,20 +11,32 @@ import { ViewChild } from '@angular/core';
 
 export class AppComponent {
   title = 'maps-angular-cv64';
-  latitude: number;
-  longitude: number;
+  latitude: number = 37.2776;
+  longitude: number = -76.5039;
+  zoom: number = 15;
 
   @ViewChild('gmap') gmapElement: any;
   map: google.maps.Map;
 
   ngOnInit() {
     console.log("maps-angular-cv64.ngOnInit");
-    var mapProp = {
-      center: new google.maps.LatLng(37.2776, -76.5039),
-      zoom: 15,
+
+    let myLatLng = { lat: this.latitude, lng: this.longitude };
+
+    let mapProperties = {
+      center: new google.maps.LatLng(this.latitude, this.longitude),
+      zoom: this.zoom,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
+
+    let marker = new google.maps.Marker({
+      position: myLatLng,
+      map: this.map,
+      title: this.title
+    });
+
+    this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProperties);
+    marker.setMap(this.map);
   }
 
   setMapType(mapTypeId: string) {
