@@ -28,7 +28,7 @@ export class CustomerService {
     return this.customerList.snapshotChanges();
   }
 
-// create unique key for the firebase database
+  // create unique key for the firebase database
   insertCustomer(customer) {
     this.customerList.push({
       fullName: customer.fullName,
@@ -44,12 +44,12 @@ export class CustomerService {
 
   updateCustomer(customer) {
     this.customerList.update(customer.$key,
-    {
-      fullName: customer.fullName,
-      email: customer.email,
-      mobile: customer.mobile,
-      location: customer.location
-    });
+      {
+        fullName: customer.fullName,
+        email: customer.email,
+        mobile: customer.mobile,
+        location: customer.location
+      });
   }
 
   deleteCustomer($key: string) {
