@@ -7,7 +7,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppComponent } from './app.component';
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
-import { CustomerService } from './shared/customer.service';
+import { CustomerService } from './services/customer.service';
 import { environment } from '../environments/environment';
 
 @NgModule({
