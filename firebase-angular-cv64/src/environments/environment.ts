@@ -17,11 +17,11 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyCFS2muou-Q9H0i6XhOHexkfz5gA68uKCU",
-    authDomain: "tutorapp-4151b.firebaseapp.com",
-    databaseURL: "https://tutorapp-4151b.firebaseio.com",
-    projectId: "tutorapp-4151b",
-    storageBucket: "tutorapp-4151b.appspot.com",
-    messagingSenderId: "720033381663"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
   }
 };
