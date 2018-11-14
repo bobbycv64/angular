@@ -21,8 +21,20 @@ export class CustomerService {
 
   getCustomers() {
 
-    // retreive all customers from the firebase database from the customers node
+    // retreive all customers from the firebase database from the customers node collection
     this.customerList = this.angularFireDatabase.list('customers');
+
+    let rootRef = this.angularFireDatabase.list('customers', ref => ref);
+
+    //let oneRef = rootRef.limitToFirst(2);
+    this.customerList = this.angularFireDatabase.list('customers', ref => ref.limitToFirst(2));
+    this.customerList = this.angularFireDatabase.list('customers', ref => ref.orderByChild('email').equalTo('bobby@test.com'));
+    this.customerList = this.angularFireDatabase.list('customers', ref => ref.orderByKey().limitToFirst(2));
+    this.customerList = this.angularFireDatabase.list('customers', ref => ref.orderByChild('fullName').startAt('b').endAt('D\uf8ff'));
+    this.customerList = this.angularFireDatabase.list('customers', ref => ref.orderByChild('location').endAt('3333'));
+    this.customerList = this.angularFireDatabase.list('customers', ref => ref.orderByChild('location').startAt('2222'));
+    this.customerList = this.angularFireDatabase.list('customers', ref => ref.orderByChild('location').startAt('2222').endAt('3333'));
+    //this.customerList = this.angularFireDatabase.list('customers', ref => ref.orderByChild('age_location').equalTo('22_2222'));
 
     // return from an observable (snapshotChanges) from customerList
     return this.customerList.snapshotChanges();
