@@ -24,7 +24,11 @@ export class CustomerService {
     // retreive all customers from the firebase database from the customers node collection
     this.customerList = this.angularFireDatabase.list('customers');
 
-    let rootRef = this.angularFireDatabase.list('customers', ref => ref);
+    let rootRef;
+    //this.angularFireDatabase.list('customers', ref => rootRef = ref);
+
+    //rootRef.limitToFirst(2);
+
 
     //let oneRef = rootRef.limitToFirst(2);
     this.customerList = this.angularFireDatabase.list('customers', ref => ref.limitToFirst(2));
